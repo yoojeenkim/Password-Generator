@@ -13,14 +13,12 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-var passwordCriteria = function() {
-  //Ask user for password criteria
-  var userChoice = window.prompt("How long is your password?");
+var upperCaseChars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var lowerCaseChars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var numericChars = ["0","1","2","3","4","5","6","7","8","9"];
+var specialChars = ["~","!","@","#","$","%","^","&","*"];
 
-  //If user presses Terminate, immediately reset all functions
-  if (!userChoice) {
-    return;
-  }
-
-  //
-}
+console.log(upperCaseChars);
+console.log(lowerCaseChars);
+console.log(numericChars);
+console.log(specialChars);
