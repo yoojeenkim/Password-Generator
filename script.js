@@ -14,8 +14,10 @@ function writePassword() {
   
     if (length < 8) {
       alert("Password must be at least 8 characters long.");
+      return;
     } else if (length > 128) {
         alert("Password must not exceed 128 characters.");
+        return;
     }
   
     // arrays 
