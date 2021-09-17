@@ -49,17 +49,21 @@ function writePassword() {
         var arrayPassword = arrayPassword.concat(specialChars);
       }
     
-      //for loop generates password the amount of times the length is at random each time
-      function randomElement (array) {
-        return array[Math.floor(Math.random() * array.length)]
-      }
-  
-      var finalPassword = [''];
-  
-      for(i=0; i<length; i++) {
-        finalPassword += randomElement(arrayPassword);
-      }
-      return finalPassword;
+    if (!upperCaseConfirm || !lowerCaseConfirm || !numericConfirm || !specialConfirm) {
+      alert('You must choose at least one of the criteria!');
+      return;
+    }
+    //for loop generates password the amount of times the length is at random each time
+    function randomElement (array) {
+      return array[Math.floor(Math.random() * array.length)]
+    }
+
+    var finalPassword = [''];
+
+    for(i=0; i<length; i++) {
+      finalPassword += randomElement(arrayPassword);
+    }
+    return finalPassword;
   }
 }
 
